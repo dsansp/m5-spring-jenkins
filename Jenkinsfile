@@ -29,4 +29,9 @@ pipeline {
             }
         }
     }
+    stage('sonar'){
+    steps {
+     bat mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dsansp_m5-spring-jenkins -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=dsansp
+}
+}
 }
