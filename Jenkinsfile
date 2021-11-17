@@ -4,11 +4,7 @@ pipeline {
         maven "Maven"
         jdk "JDK17"
     }
-    stages {
-        stage("Env Variables") {
-            steps {
-                bat "printenv"
-            }
+
         }
         stage('Build') {
             steps {
