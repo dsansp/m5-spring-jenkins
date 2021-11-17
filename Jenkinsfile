@@ -22,7 +22,7 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
             }
-
+}
         stage('Site') {
             steps {
                 bat 'mvn site'
